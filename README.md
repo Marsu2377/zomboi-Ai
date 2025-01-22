@@ -1,23 +1,14 @@
 # Zomboi
 
-A discord bot for dedicated project zomboid servers. Currently under heavy development, but any testing/feedback is welcome.
+This is an edit from the original Python Script uploaded by JohnnyPtn. Optimized to handle perk logs and chat logs better to not crash chat reporting during high loads, such as when the skill recovery journal and bikini tools SE restore pods are used, which flood the bot causing chat reporting to error out and no longer report in the discord. 
 
-This is also an exercise for me to learn c# better so if you are experienced and wondering wtf is going on with this code, please share some knowledge with me :)
+This bot is seeminly more stable now for high population zomboid servers. This is used heavily for "The Doobie Brothers Community Server". Handling about 25-45 players on average. ACSII and other non-latin characters are also now handled better and will be replaced with question marks (?).
 
-## Commands
+Unzip Zomboi-AI folder and install python 3.8.0 as recommended by johnnyptn. Install all required dependenies
 
-The bot makes use of slash commands for most things, so if you start typing `/` discord will show the commands available.
+Extra dependencies recommended by ChatGPT to handle data base log reads and chat character decoding.
+pip install aiosqlite
 
-Features include:
-- Server management
-- Mod management
-- Player info
+&
 
-## Notifications
-- Players joining or leaving
-- Players levelling up
-- Chat mirrored from Global in-game chat (Only game -> discord mirroring, not the other way round yet)
-
-### Quick start
-
-Copy the `zomboi.ini.sample` file and rename to `zomboi.ini` then populate with your desired values. Then run `dotnet run`
+pip install charset-normalizer
